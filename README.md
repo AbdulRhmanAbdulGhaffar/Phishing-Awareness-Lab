@@ -49,7 +49,7 @@ Zphisher is a publicly available toolkit used to generate simulated phishing pag
 
 # B. Installation & Execution Steps (Linux/Kali Environment)
 
-## Follow these steps to set up and run the Zphisher tool:
+- Follow these steps to set up and run the Zphisher tool:
 
 
 # Ensures your local package list is up-to-date.
