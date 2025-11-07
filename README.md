@@ -51,19 +51,19 @@ Zphisher is a publicly available toolkit used to generate simulated phishing pag
 
 ## Follow these steps to set up and run the Zphisher tool:
 
+
+# Ensures your local package list is up-to-date.
 - Update System Packages:
  ```
 sudo apt update
  ```
 
-# Ensures your local package list is up-to-date.
+##Install Git (Required Dependency):
 
-- Install Git (Required Dependency):
  ```
 sudo apt install git -y
  ```
-
-# Installs the necessary tool for cloning repositories.
+## Installs the necessary tool for cloning repositories.
 
 - Clone the Zphisher Repository (Deep-Level Clone):
  ```
@@ -72,23 +72,23 @@ sudo git clone --depth=1 [https://github.com/htr-tech/zphisher.git](https://gith
 
 # Downloads only the latest commit to save time and space.
 
+## Moves into the newly downloaded Zphisher folder.
+
 - Navigate to the Tool Directory:
  ```
 cd zphisher/
  ```
-
-# Moves into the newly downloaded Zphisher folder.
+# Runs the main shell script to launch the Zphisher interface.
 
 - Execute the Tool:
  ```
 bash zphisher.sh
 
  ```
-# Runs the main shell script to launch the Zphisher interface.
 
-- 3. Simulated Attack Scenario: Lure Details
+# 3. Simulated Attack Scenario: Lure Details
 
-# A. Delivery Method (Simulation)
+## A. Delivery Method (Simulation)
 
 - Simulated Email Sending Platform: 
  ```
