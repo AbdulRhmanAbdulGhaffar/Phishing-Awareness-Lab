@@ -1,91 +1,64 @@
-# 🎣 Phishing Awareness & Defense Lab — مختبر التوعية والدفاع ضد الاحتيال الإلكتروني
+![Repository header image](https://i.postimg.cc/kX0wcktm/phishing.png)
 
-![Hero image — Phishing illustration](https://i.postimg.cc/kX0wcktm/phishing.png)
-*صورة توضيحية: دورة هجوم التصيّد (من اللاحظة إلى صفحة التصيّد والاختراق المحتمل)*
+# Zphisher — Security Research & Awareness (Ethical Use Only)
 
-[![Status](https://img.shields.io/badge/status-educational-blue)](#)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey)](#license)
-[![Contribute](https://img.shields.io/badge/contribute-welcome-green)](#contributing)
+**Status:** For authorized, ethical security research and awareness training only.
 
----
+## Overview
+This repository contains documentation for responsible, ethical research related to social-engineering and phishing techniques **for the purpose of defense, detection, and employee awareness**. It does **not** contain operational instructions for conducting real-world attacks, and it must not be used to target real users, customers, or systems without explicit written authorization.
 
-## 📌 نظرة عامة
-هذا المستودع مخصص لأغراض تعليمية وتوعوية فقط — يهدف لشرح آليات حملات **Phishing** (التصيّد) وكيفية التعرف عليها والوقاية منها. المحتوى يركز على التحليل، محاكاة آمنة داخل بيئات مغلقة، واستراتيجيات دفاعية عملية للمؤسسات والمستخدمين النهائيين.
+## Purpose
+- Educate security teams and stakeholders about common phishing techniques.
+- Provide reproducible, **lab-only** guidance for safe testing in isolated environments.
+- Supply defensive detection heuristics, indicators of compromise (IOCs), and training materials to improve organizational resilience.
 
-> ⚠️ **تنبيه قانوني مهم:** يمنع تمامًا استخدام أي معلومات هنا لأغراض ضارة أو إجراء هجمات ضد أشخاص/منظمات حقيقية. كل أمثلة المحاكاة يجب أن تُجرى في بيئات اختبارية مع موافقات صريحة.
+## Legal & Ethical Notice
+- All testing must be performed **only** on systems and accounts you own or on which you have written permission.
+- Unauthorized use of phishing tools or impersonation of third parties is illegal and unethical.
+- Maintain a record of authorization and follow responsible disclosure procedures for any vulnerabilities discovered.
 
----
+## Recommended (Safe) Lab Setup — High Level
+> The following are conceptual guidelines for creating a contained test environment. They purposely avoid step-by-step commands for attack tools.
 
-## 🎯 أهداف المستودع
-- شرح دورة هجوم التصيّد من منظور المهاجم والمستهدف.  
-- تحليل الرسائل الاحتيالية الشائعة وعناصر الهندسة الاجتماعية المستخدمة فيها.  
-- عرض قوائم تدقيق (checklists) للمدراء الأمنيين والمستخدمين للوقاية الفعلية.  
-- توفير أمثلة تعليمية ومصادر لتدريب الفرق (بدون تعليمات تنفيذية ضارة).
+1. Use virtual machines (VMs) or containers on an isolated network segment (no Internet access) for hosting test targets.  
+2. Use a separate management network or jump host to monitor traffic and logs.  
+3. Capture network traffic (pcap) and enable endpoint logging for clear audit trails.  
+4. Do not expose test infrastructure to the public Internet unless strictly required and approved.  
+5. Maintain backups and snapshots of VM images for rollback.
 
----
+## Prerequisites (conceptual)
+- Basic familiarity with Linux command line, virtualization (VMware, VirtualBox, or equivalent), and networking.  
+- Access to monitoring tools (tcpdump/wireshark, SIEM/log collectors) for observing tests.  
+- Organizational approval/authorization document for security testing.
 
-## 🔍 واجهة الصورة (Hero) — شرح مختصر
-الصورة المرفقة أعلى الـ README تعرض مسار الهجوم:
-- المهاجم ينشئ صفحة تصيّد مشابهة لموقع حقيقي.  
-- رسالة احتيال (البِرية) تُرسل للمستخدم تحوي رابطًا مغلوطًا.  
-- المستخدم يضغط ويصل لصفحة مزيفة، ويُدخل بياناته التي تُجمع من قبل المهاجم.  
+## Safe Research Workflow (conceptual)
+1. Obtain written authorization (scoped to systems, timeframe, and objectives).  
+2. Configure an isolated lab environment and baseline monitoring.  
+3. Perform tests that simulate attack patterns **only** in the lab.  
+4. Analyze artifacts (logs, captures) to derive detection rules and countermeasures.  
+5. Produce defensive outputs: detection signatures, employee training modules, and remediation guidance.  
+6. Share findings with stakeholders and follow responsible disclosure if third-party systems are impacted.
 
-**ALT text (للوصول):** `phishing attack flow: attacker -> phishing email -> employee -> phishing website -> credential theft`
+## Detection & Defensive Guidance (examples)
+- Train staff to verify sender addresses and avoid clicking links without independent verification.  
+- Implement multi-factor authentication (MFA) and monitor for unusual login locations/IPs.  
+- Use email authentication (SPF, DKIM, DMARC) and enforce strict policies.  
+- Deploy URL rewriting/proxy scanning on email gateways and inspect attachments in sandboxes.
 
----
+## Training & Awareness Materials
+This repo may include:
+- Employee awareness checklist.
+- Example "how to spot phishing" one-pager.
+- Incident reporting flowchart.
 
-## 🧭 فهرس المحتوى
-- [التهديد — Anatomy of a Phishing Attack](#التهديد---anatomy-of-a-phishing-attack)  
-- [التحليل التعليمي للـ Lure](#التحليل-التعليمي-للـ-lure)  
-- [دفاعات تقنية وإجرائية](#دفاعات-تقنية-وإجرائية)  
-- [محاكاة آمنة (Guidelines فقط)](#محاكاة-آمنة-guidelines-فقط)  
-- [هيكل المستودع المقترح](#هيكل-المستودع-المقترح)  
-- [المساهمة والاتصال](#المساهمة-والاتصال)  
-- [ترخيص](#ترخيص)
+> Note: Awareness templates should **not** mimic or impersonate real companies. Use generic examples or clearly labelled simulations.
 
----
+## Responsible Disclosure / Contact
+If you discover a security issue, follow this process:
+1. Document the finding and the scope.
+2. Notify the affected party via their published security contact or vulnerability disclosure process.
+3. Provide remediation steps and allow reasonable time for fixes before public disclosure.
 
-## 🧩 التهديد — Anatomy of a Phishing Attack
-**مراحل رئيسية**  
-1. **إعداد المهاجم:** بناء صفحة وهمية تُحاكي خدمة موثوقة.  
-2. **إرسال الطُعم (The Lure):** بريد/رسالة مصممة لخلق شعور بالعجلة أو الخوف.  
-3. **الخطاف (Hook):** المستخدم يضغط على الرابط ويُحوّل للصفحة المزيفة.  
-4. **سرقة بيانات الاعتماد:** البيانات تُسجّل لدى المهاجم.  
-5. **استغلال لاحق:** الدخول للحسابات، طلب تحويل مالي، أو هجمات متابعة.
-
----
-
-## ✉️ التحليل التعليمي للـ Lure (مثال PayPal)
-**نص الرسالة النموذجي (تعليمي فقط):**
-> "Immediate Action Required: Account Suspension Warning — Please verify within 24 hours..."
-
-**عناصر الهندسة الاجتماعية المستخدمة:**
-- **الخوف والتهديد** (Account suspension)  
-- **الضغط الزمني** (24 hours)  
-- **دعوة لإجراء فوري** (Log in to verify)  
-
-**مقابل كل عنصر — إجراءات دفاعية بسيطة:**
-- الخوف والتهديد → راجع عنوان المرسل وارتباطات الـ URL قبل الضغط.  
-- الضغط الزمني → اتصل مباشرة عبر القنوات الرسمية للشركة.  
-- دعوة لإدخال بيانات → أدخل رابط الموقع يدويًا أو استخدم bookmark رسمي.
+For questions about using this repository for authorized research, contact: `[security@example.org]` (replace with your organization's security contact).
 
 ---
-
-## 🛡️ دفاعات تقنية وإجرائية
-- تفعيل **المصادقة المتعددة العوامل (MFA/2FA)** على كل الحسابات الحساسة.  
-- تحديث الأنظمة والمتصفحات والبرمجيات المضادة للفيروسات بانتظام.  
-- فلاتر البريد الإلكتروني (SPF, DKIM, DMARC) لتقليل الرسائل المزوّرة.  
-- تدريب دوري للموظفين (محاكاة آمنة + تقارير بعد كل حملة).  
-- سياسة صارمة للتبليغ عن رسائل مشبوهة وإجراءات استجابة للحوادث.
-
----
-
-## ⚙️ محاكاة آمنة — Guidelines فقط
-> **ممنوع** عرض أو توجيه خطوات تنفيذية لشن هجوم حقيقي. إن أردت محاكاة داخل المؤسسة، التزم بالقواعد:  
-- نفّذ فقط داخل شبكة مغلقة ومع موافقة إدارة الأمن.  
-- لا تستخدم بيانات حقيقية للمستخدمين.  
-- سجل نتائج التدريب وحللها لتحسين الوعي والتقنيات الدفاعية.
-
----
-
-## 📁 هيكل المستودع المقترح
