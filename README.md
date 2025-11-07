@@ -1,188 +1,136 @@
-```bash
-# Quick install (one-line, for lab setup)
-# Run from project root: creates docker-based MailHog test environment
-bash ./scripts/setup-mailhog.sh
-```
+
+# Phishing Awareness Lab — README
+
+[![Phishing Hero Image](https://i.postimg.cc/kX0wcktm/phishing.png)](https://i.postimg.cc/kX0wcktm/phishing.png)
+
+**Image link:** https://i.postimg.cc/kX0wcktm/phishing.png
 
 ---
 
-# Phishing Awareness Lab — Quick Visual README
+## Overview
+This repository contains educational materials and guidance for a **Phishing Awareness Lab** intended for training and awareness purposes only. Its primary goal is to help employees and security teams recognize phishing attempts, analyze phishing examples safely, and practice non-destructive response and reporting procedures.
 
-**Tagline:** Responsible phishing-simulation resources & isolated training lab
-
-> This visual README is designed to be exported as a single high-quality Canva image (recommended size: 1600×900 px). It documents **installation**, **usage**, **safety & legal rules**, and **how to run the lab**. Use the design guide below to make it visually outstanding.
-
----
-
-## 1) One-line Quick Start (Installation)
-
-1. Clone repository:
-
-```bash
-git clone https://github.com/<your-org>/phishing-awareness-lab.git
-cd phishing-awareness-lab
-```
-
-2. Start the test mail environment (Docker + MailHog):
-
-```bash
-bash ./scripts/setup-mailhog.sh
-```
-
-3. Verify UI: open `http://localhost:8025` to preview test messages.
+**Key principles:**
+- Education first: content is tailored to raise awareness, not to enable attacks.
+- Safety and compliance: do not run offensive tools or simulate attacks in production without explicit written approval from legal, compliance, and leadership.
+- Transparency: all materials should be clearly flagged as training content.
 
 ---
 
-## 2) Detailed Installation
+## Legal & Ethical Disclaimer (Read Carefully)
+This repository is strictly for **authorized, ethical, and educational** use. By using the materials here you agree to the following:
+- You will only use the content within approved training environments, with appropriate approvals from your organization’s legal and security teams.
+- You will never use these materials to create or deploy real phishing attacks against individuals, organizations, or services.
+- The repository author(s) and contributors are **not** responsible for any misuse of the content.
 
-**Requirements**
-
-* Git
-* Docker & Docker Compose
-* Bash (Linux / WSL / macOS)
-
-**Steps**
-
-1. Clone the repo (see above).
-2. Make script executable (if needed):
-
-```bash
-chmod +x ./scripts/setup-mailhog.sh
-```
-
-3. Run the script:
-
-```bash
-./scripts/setup-mailhog.sh
-```
-
-4. The script will pull `mailhog/mailhog` and expose ports `8025` (web UI) and `1025` (SMTP).
-5. To stop and remove the container:
-
-```bash
-docker compose down --volumes
-# or if you used `docker run`, find container id and `docker rm -f <id>`
-```
+If you need to perform controlled phishing simulations, engage vendor platforms or internal red-team teams that operate under a formal authorization process.
 
 ---
 
-## 3) Usage — Safe Training Workflow
+## Purpose & Intended Audience
+This lab is designed for:
+- Security awareness trainers
+- Security operations and incident response teams
+- HR and compliance teams planning educational campaigns
+- Employees seeking to improve their phishing recognition skills
 
-1. **Prepare a safe test email** using `TEMPLATES/training-email-sample.txt`. Do **not** include external links or real recipient addresses outside the lab.
-2. **Send test message** to MailHog SMTP (port 1025) — applications or scripts must point SMTP to `localhost:1025`.
-3. **Check delivery & content** via MailHog UI at `http://localhost:8025`.
-4. **Collect metrics**: track which participants opened or clicked in a controlled setting (use internal logging only).
-5. **Report & debrief**: use `TEMPLATES/reporting-form.md` to collect feedback and lessons learned.
-
----
-
-## 4) Scripts included (quick reference)
-
-* `scripts/setup-mailhog.sh` — pulls and runs MailHog in docker (ports 8025, 1025).
-* `scripts/teardown.sh` — stops and removes containers and volumes.
-* `TEMPLATES/` — training email and reporting form templates.
+Not intended for: actors seeking to design or deploy phishing attacks.
 
 ---
 
-## 5) Safety & Legal Checklist (MUST READ)
+## Contents of this Repository
+- **Educational guides**: Explanations of phishing techniques and common red flags.
+- **Sanitized examples**: Deactivated or redacted phishing message examples for analysis.
+- **Analysis templates**: How to dissect a suspicious message safely.
+- **Checklists**: Quick verification steps employees can use when they suspect a phishing email.
+- **Reporting playbook**: Clear steps for reporting suspected phishing inside your organization.
+- **Trainer materials**: Slide templates and suggested exercises for instructor-led sessions.
 
-* ✅ Obtain **written authorization** from system owners before any simulation.
-* ✅ Notify HR and Legal; define allowed scope, participants, timing.
-* ✅ Never send to public or external recipients.
-* ✅ Use dummy or test accounts only; avoid real PII.
-* ✅ Provide an immediate take-down / stop procedure.
-
-If any of the above cannot be met — do not run the test.
-
----
-
-## 6) Best Practices for a Professional Campaign
-
-* Use clear internal messaging explaining the learning objective.
-* Keep simulations short, limited in scope, and non-invasive.
-* Provide training resources and follow-up workshops after the test.
-* Maintain an incident log and anonymize participant data.
+> No repository files contain operational instructions or scripts to run attack tools.
 
 ---
 
-## 7) Troubleshooting
+## Example: Sanitized Phishing Message (For Analysis)
+> The example below is intentionally neutralized and cannot be used to execute attacks. It is presented to teach detection and analysis.
 
-* If MailHog web UI is not reachable: ensure Docker is running and ports are not blocked.
-* Check logs:
+**Subject:** PayPal — Immediate Action Required: Account Verification  
+**Excerpt (sanitized):**
+> Dear Customer,  
+> Our systems have detected suspicious activity on your account. To prevent permanent suspension, please verify your account details within 24 hours by following the secure link provided in your account notifications.
 
-```bash
-docker logs <container-id>
-```
+**Why this looks suspicious:**
+- Uses urgency and threats ("Immediate", "PERMANENT SUSPENSION").
+- Asks the recipient to follow a link to verify sensitive data.
+- May use a display name that does not match the actual sender address.
+- Often contains subtle domain typos or redirects.
 
-* Common fixes: restart Docker engine; free ports `8025`/`1025` if in use.
-
----
-
-## 8) Contribution & Code of Conduct
-
-Contributions are welcome but must align with the repository's non-offensive, defensive purpose. See `CONTRIBUTING.md` and `CODE_OF_CONDUCT.md` for rules.
-
----
-
-## 9) Export & Canva Design Guide (how to make it visually exceptional)
-
-**Canva canvas size:** 1600 × 900 px (landscape)
-
-**Layout (three-column / tile-friendly):**
-
-* Header (full-width): Project name, tagline, logo left, one-line code block (copyable) on the right.
-* Main body (three tiles): Installation (tile 1), Usage (tile 2), Safety & Legal (tile 3).
-* Footer (full-width): Quick scripts list, contact/maintainers, license badge.
-
-**Typography:**
-
-* Header title: Inter or Montserrat (bold, 36–48pt)
-* Section headings: 18–22pt
-* Body text: 12–14pt
-* Code block: monospace font (e.g., Inconsolata) in a rounded rectangle with subtle shadow
-
-**Color palette suggestion:**
-
-* Primary: #0B5FFF (deep blue)
-* Accent: #06B6D4 (teal)
-* Neutral background: #F8FAFC (very light gray)
-* Danger (warnings): #F97316 (orange)
-
-**Visual elements:**
-
-* Add 2–3 icons (installation, shield/legal, mail) to the tiles.
-* Show a small MailHog screenshot (assets/mailhog-sample.png) in the Usage tile.
-* Add badges: License (MIT), Docs status (docs build passing), Repo topic tags.
-
-**Accessibility:**
-
-* Ensure 4.5:1 contrast for text on background.
-* Use large click targets and readable font sizes.
-
-**Export recommendations:**
-
-* Export as PNG at 2x resolution for crispness (3200×1800 px). Provide an SVG if using vector elements.
+**Teaching points:**
+1. Never click links from unsolicited emails — manually visit the vendor’s official site.
+2. Verify sender email headers when possible.
+3. Look for grammar, punctuation, or branding inconsistencies.
+4. When in doubt, escalate to your security team.
 
 ---
 
-## 10) Contact & Maintainers
+## Detection Checklist (Employee-friendly)
+Use this checklist when reviewing a suspicious email:
+1. Is the sender address from the legitimate corporate domain? (Careful: display names can be spoofed.)
+2. Does the message contain urgent threats or pressure tactics?
+3. Does the message ask for credentials, payment info, or personal data?
+4. Are there unexpected attachments or links?
+5. Does the email contain spelling/grammar errors, unusual formatting, or incorrect branding?
+6. If the message claims to be from a service (bank, payment provider), do not use the provided link — visit the official website directly.
 
-* Maintainer: Security Training Team — [[security@example.com](mailto:security@example.com)]
-* Repo: `github.com/<your-org>/phishing-awareness-lab`
+If you suspect phishing, follow the reporting instructions in your organization immediately.
 
 ---
 
-## 11) License
+## Safe Lab & Simulation Guidance (Non-actionable)
+If your organization intends to run phishing simulations for training or assessment:
+- Obtain formal written approval from leadership, legal, and HR.
+- Use a dedicated, isolated lab environment or a trusted third-party phishing simulation platform.
+- Notify affected stakeholders (per policy) where required, and ensure participants have a way to opt-out if necessary.
+- Ensure post-simulation support: remediation instructions, debriefs, and learning resources.
+- Keep metrics and results confidential and use them for training and improvement — not punishment.
 
-This document and templates are distributed under the MIT license. See `LICENSE` for full text.
+**Do not** include operational steps for offensive tools, hosting phishing sites, or sending unsolicited deceptive emails in this repository.
 
 ---
 
-*If you want, I can now:*
+## Recommended (Safe) Resources & Platforms
+- Organizational security awareness platforms (conducted by authorized teams)
+- Public guidance from official cyber agencies (e.g., national CERT/CSIRT pages)
+- OWASP and SANS awareness resources for training curricula
+- Security vendors that provide controlled phishing awareness solutions
 
-1. Generate a Canva-ready PNG (with layout) — or provide the file contents to paste into Canva.
-2. Produce the README as both English and Arabic variants.
-3. Create the `scripts/setup-mailhog.sh` and other small helper scripts here.
+---
 
-Which option would you like next?
-# Phishing-Awareness-Lab
+## Trainer’s Session Template (Suggested)
+1. Brief intro to phishing concepts (10–15 min)
+2. Walkthrough of sanitized phishing examples (10–20 min)
+3. Group activity: analyze and flag suspicious elements (15–20 min)
+4. Demonstrate reporting procedure and available support (10 min)
+5. Q&A and follow-up resources (10–15 min)
+
+---
+
+## Contribution Guidelines
+Contributions are welcome but must follow these rules:
+- Maintain an educational and defensive focus.
+- Do not add scripts, code, or instructions that enable phishing attacks.
+- Add sanitized examples only (redacted links, no operational endpoints).
+- New contributions should be reviewed by the security team before merging.
+
+---
+
+## License
+This repository is provided under the MIT License (or an alternative license chosen by your organization). Do not use this material to facilitate unlawful or unethical actions.
+
+---
+
+## Contact & Approval
+For authorized testing or to request a formal phishing simulation, contact your Security/Compliance team with documented approval before proceeding. Include objectives, scope, timeline, and rollback/mitigation plans.
+
+---
+
+*Prepared as an educational, non-actionable resource. If you would like a PDF or a visually-designed one-page Canva-like graphic derived from this README, say the word and specify colors and logo preferences.* 
