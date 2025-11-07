@@ -42,9 +42,10 @@ This section outlines the setup for running a controlled, ethical simulation env
 
 Zphisher is a publicly available toolkit used to generate simulated phishing pages quickly. In this lab, it is used to generate targets for defensive tools and understand the attacker's setup process.
 
-### Installation
+---
 
 ### Installation
+
 
 # B. Installation & Execution Steps (Linux/Kali Environment)
 
