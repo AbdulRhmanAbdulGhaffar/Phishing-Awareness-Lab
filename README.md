@@ -58,7 +58,7 @@ Zphisher is a publicly available toolkit used to generate simulated phishing pag
 sudo apt update
  ```
 
-##Install Git (Required Dependency):
+## Install Git (Required Dependency):
 
  ```
 sudo apt install git -y
