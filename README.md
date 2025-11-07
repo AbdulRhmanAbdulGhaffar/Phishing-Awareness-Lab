@@ -1,64 +1,190 @@
-![Repository header image](https://i.postimg.cc/kX0wcktm/phishing.png)
+<!-- Zphisher -->
 
-# Zphisher — Security Research & Awareness (Ethical Use Only)
+<p align="center">
+  <img src=".github/misc/logo.png">
+</p>
 
-**Status:** For authorized, ethical security research and awareness training only.
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-2.3.5-green?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/htr-tech/zphisher?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/htr-tech/zphisher?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/htr-tech/zphisher?color=red&style=for-the-badge">
+  <img src="https://img.shields.io/github/forks/htr-tech/zphisher?color=teal&style=for-the-badge">
+</p>
 
-## Overview
-This repository contains documentation for responsible, ethical research related to social-engineering and phishing techniques **for the purpose of defense, detection, and employee awareness**. It does **not** contain operational instructions for conducting real-world attacks, and it must not be used to target real users, customers, or systems without explicit written authorization.
+<p align="center">
+  <img src="https://img.shields.io/badge/Author-htr--tech-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Open%20Source-Yes-darkgreen?style=flat-square">
+  <img src="https://img.shields.io/badge/Maintained%3F-Yes-lightblue?style=flat-square">
+  <img src="https://img.shields.io/badge/Written%20In-Bash-darkcyan?style=flat-square">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhtr-tech%2Fzphisher&title=Visitors&edge_flat=false"/></a>
+</p>
 
-## Purpose
-- Educate security teams and stakeholders about common phishing techniques.
-- Provide reproducible, **lab-only** guidance for safe testing in isolated environments.
-- Supply defensive detection heuristics, indicators of compromise (IOCs), and training materials to improve organizational resilience.
+<p align="center"><b>A beginners friendly, Automated phishing tool with 30+ templates.</b></p>
 
-## Legal & Ethical Notice
-- All testing must be performed **only** on systems and accounts you own or on which you have written permission.
-- Unauthorized use of phishing tools or impersonation of third parties is illegal and unethical.
-- Maintain a record of authorization and follow responsible disclosure procedures for any vulnerabilities discovered.
+##
 
-## Recommended (Safe) Lab Setup — High Level
-> The following are conceptual guidelines for creating a contained test environment. They purposely avoid step-by-step commands for attack tools.
+<h3><p align="center">Disclaimer</p></h3>
 
-1. Use virtual machines (VMs) or containers on an isolated network segment (no Internet access) for hosting test targets.  
-2. Use a separate management network or jump host to monitor traffic and logs.  
-3. Capture network traffic (pcap) and enable endpoint logging for clear audit trails.  
-4. Do not expose test infrastructure to the public Internet unless strictly required and approved.  
-5. Maintain backups and snapshots of VM images for rollback.
+<i>Any actions and or activities related to <b>Zphisher</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
 
-## Prerequisites (conceptual)
-- Basic familiarity with Linux command line, virtualization (VMware, VirtualBox, or equivalent), and networking.  
-- Access to monitoring tools (tcpdump/wireshark, SIEM/log collectors) for observing tests.  
-- Organizational approval/authorization document for security testing.
+<b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using,or in any other way utilizing this in a wrong way.
 
-## Safe Research Workflow (conceptual)
-1. Obtain written authorization (scoped to systems, timeframe, and objectives).  
-2. Configure an isolated lab environment and baseline monitoring.  
-3. Perform tests that simulate attack patterns **only** in the lab.  
-4. Analyze artifacts (logs, captures) to derive detection rules and countermeasures.  
-5. Produce defensive outputs: detection signatures, employee training modules, and remediation guidance.  
-6. Share findings with stakeholders and follow responsible disclosure if third-party systems are impacted.
+<b>This Tool is made for educational purposes only</b>. Do not attempt to violate the law with anything contained here. <b>If this is your intention, then Get the hell out of here</b>!
 
-## Detection & Defensive Guidance (examples)
-- Train staff to verify sender addresses and avoid clicking links without independent verification.  
-- Implement multi-factor authentication (MFA) and monitor for unusual login locations/IPs.  
-- Use email authentication (SPF, DKIM, DMARC) and enforce strict policies.  
-- Deploy URL rewriting/proxy scanning on email gateways and inspect attachments in sandboxes.
+It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</i>
 
-## Training & Awareness Materials
-This repo may include:
-- Employee awareness checklist.
-- Example "how to spot phishing" one-pager.
-- Incident reporting flowchart.
+##
 
-> Note: Awareness templates should **not** mimic or impersonate real companies. Use generic examples or clearly labelled simulations.
+### Features
 
-## Responsible Disclosure / Contact
-If you discover a security issue, follow this process:
-1. Document the finding and the scope.
-2. Notify the affected party via their published security contact or vulnerability disclosure process.
-3. Provide remediation steps and allow reasonable time for fixes before public disclosure.
+- Latest and updated login pages.
+- Beginners friendly
+- Multiple tunneling options
+  - Localhost
+  - Cloudflared
+  - LocalXpose
+- Mask URL support 
+- Docker support
 
-For questions about using this repository for authorized research, contact: `[security@example.org]` (replace with your organization's security contact).
+##
 
----
+### Installation
+
+- Just, Clone this repository -
+  ```
+  git clone --depth=1 https://github.com/htr-tech/zphisher.git
+  ```
+
+- Now go to cloned directory and run `zphisher.sh` -
+  ```
+  $ cd zphisher
+  $ bash zphisher.sh
+  ```
+
+- On first launch, It'll install the dependencies and that's it. ***Zphisher*** is installed.
+
+##
+
+### Installation (Termux)
+You can easily install zphisher in Termux by using tur-repo
+```
+$ pkg install tur-repo
+$ pkg install zphisher
+$ zphisher
+```
+### A Note : 
+***Termux discourages hacking*** .. So never discuss anything related to *zphisher* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
+
+##
+
+<p align="left">
+  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/htr-tech/zphisher.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
+</p>
+
+##
+
+### Installation via ".deb" file
+
+- Download `.deb` files from the [**Latest Release**](https://github.com/htr-tech/zphisher/releases/latest)
+- If you are using ***termux*** then download the `*_termux.deb`
+
+- Install the `.deb` file by executing
+  ```
+  apt install <your path to deb file>
+  ```
+  Or
+  ```
+  $ dpkg -i <your path to deb file>
+  $ apt install -f
+  ```
+
+##
+
+### Run on Docker
+
+- Docker Image Mirror:
+  - **DockerHub** : 
+    ```
+    docker pull htrtech/zphisher
+    ```
+  - **GHCR** : 
+    ```
+    docker pull ghcr.io/htr-tech/zphisher:latest
+    ```
+
+- By using the wrapper script [**run-docker.sh**](https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh)
+
+  ```
+  $ curl -LO https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh
+  $ bash run-docker.sh
+  ```
+- Temporary Container
+
+  ```
+  docker run --rm -ti htrtech/zphisher
+  ```
+  - Remember to mount the `auth` directory.
+
+##
+
+<details>
+  <summary><h3>Dependencies</h3></summary>
+
+<b>Zphisher</b> requires following programs to run properly - 
+- `git`
+- `curl`
+- `php`
+
+> All the dependencies will be installed automatically when you run **Zphisher** for the first time.
+</details>
+
+<details>
+  <summary><h3>Tested on</h3></summary>
+
+- **Ubuntu**
+- **Debian**
+- **Arch**
+- **Manjaro**
+- **Fedora**
+- **Termux**
+</details>
+
+##
+
+<h3 align="center"><i>:: Workflow ::</i></h3>
+<p align="center">
+<img src=".github/misc/workflow.gif"/>
+</p>
+
+##
+
+### Find Me on:
+<p align="left">
+  <a href="https://tahmidrayat.is-a.dev" target="_blank"><img src="https://img.shields.io/badge/Socials-grey?style=for-the-badge&logo=linktree"></a>
+  <a href="https://github.com/htr-tech" target="_blank"><img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github"></a>
+</p>
+
+
+### *Thanks to all contributors*:
+
+<table>
+  <tr align="center">
+    <td><a href="https://github.com/1RaY-1"><img src="https://avatars.githubusercontent.com/u/78962948?s=100" /><br /><sub><b>1RaY-1</b></sub></a></td>
+    <td><a href="https://github.com/adi1090x"><img src="https://avatars.githubusercontent.com/u/26059688?s=100" /><br /><sub><b>Aditya Shakya</b></sub></a></td>
+    <td><a href="https://github.com/AliMilani"><img src="https://avatars.githubusercontent.com/u/59066012?s=100" /><br /><sub><b>Ali Milani</b></sub></a></td>
+    <td><a href="https://github.com/Meht-evaS"><img src="https://avatars.githubusercontent.com/u/57435273?s=100" /><br /><sub><b>AmnesiA</b></sub></a></td>
+    <td><a href="https://github.com/KasRoudra"><img src="https://avatars.githubusercontent.com/u/78908440?s=100" /><br /><sub><b>KasRoudra</b></sub></a></td>
+   <td><a href="https://github.com/MoisesTapia"><img src="https://avatars.githubusercontent.com/u/28166400?s=100" /><br /><sub><b>Moises Tapia</b></sub></a></td>
+  </tr>
+  <tr align="center">
+   <td><a href="https://github.com/E343IO"><img src="https://avatars.githubusercontent.com/u/74646789?s=100" /><br /><sub><b>Mr.Derek</b></sub></a></td>
+    <td><a href="https://github.com/BDhackers009"><img src="https://avatars.githubusercontent.com/u/67186139?s=100" /><br /><sub><b>Mustakim Ahmed</b></sub></a></td>
+    <td><a href="https://github.com/sepp0"><img src="https://avatars.githubusercontent.com/u/36642137?s=100" /><br /><sub><b>sepp0</b></sub></a></td>
+    <td><a href="https://github.com/TripleHat"><img src="https://avatars.githubusercontent.com/u/68332137?s=100" /><br /><sub><b>TripleHat</b></sub></a></td>
+    <td><a href="https://github.com/Yisus7u7"><img src="https://avatars.githubusercontent.com/u/64093255?s=100" /><br /><sub><b>Yisus7u7</b></sub></a></td>
+  </tr>
+<table>
+
+<!-- // -->
+
