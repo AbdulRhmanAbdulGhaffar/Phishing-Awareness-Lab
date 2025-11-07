@@ -1,7 +1,7 @@
 <!-- Zphisher -->
 
 <p align="center">
-  <img src=".github/misc/logo.png">
+  <img src="https://i.postimg.cc/kX0wcktm/phishing.png">
 </p>
 
 <p align="center">
@@ -186,5 +186,4 @@ $ zphisher
   </tr>
 <table>
 
-<!-- // -->
 
