@@ -7,15 +7,18 @@
 
 ##
 
-<h3><p align="center">Disclaimer</p></h3>
+<h1><p align="center">Disclaimer</p></h1>
 
-<i>Any actions and or activities related to <b>Zphisher</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
+ ```
+<B>Any actions and or activities related to <b>Zphisher</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
 
 <b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using,or in any other way utilizing this in a wrong way.
 
 <b>This Tool is made for educational purposes only</b>. Do not attempt to violate the law with anything contained here. <b>If this is your intention, then Get the hell out of here</b>!
 
-It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</i>
+It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</B>
+
+ ```
 
 ##
 
@@ -32,9 +35,6 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
 
 ##
 
-### Installation
-
-
 ## 2. Educational Simulation Environment Setup
 
 This section outlines the setup for running a controlled, ethical simulation environment, similar to tools like Zphisher, to create test pages for defensive analysis. This must only be performed on closed, controlled networks and is strictly for security testing and educational purposes.
@@ -42,6 +42,10 @@ This section outlines the setup for running a controlled, ethical simulation env
 # A. Tool Used: Zphisher (Social Engineering Toolkit)
 
 Zphisher is a publicly available toolkit used to generate simulated phishing pages quickly. In this lab, it is used to generate targets for defensive tools and understand the attacker's setup process.
+
+### Installation
+
+### Installation
 
 # B. Installation & Execution Steps (Linux/Kali Environment)
 
