@@ -72,7 +72,7 @@ sudo git clone --depth=1 [https://github.com/htr-tech/zphisher.git](https://gith
 
 # Downloads only the latest commit to save time and space.
 
-## Moves into the newly downloaded Zphisher folder.
+### Moves into the newly downloaded Zphisher folder.
 
 - Navigate to the Tool Directory:
  ```
