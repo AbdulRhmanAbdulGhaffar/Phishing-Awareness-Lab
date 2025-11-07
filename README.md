@@ -4,23 +4,6 @@
   <img src="https://i.postimg.cc/kX0wcktm/phishing.png">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Version-2.3.5-green?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/htr-tech/zphisher?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/htr-tech/zphisher?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/htr-tech/zphisher?color=red&style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/htr-tech/zphisher?color=teal&style=for-the-badge">
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Author-htr--tech-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Open%20Source-Yes-darkgreen?style=flat-square">
-  <img src="https://img.shields.io/badge/Maintained%3F-Yes-lightblue?style=flat-square">
-  <img src="https://img.shields.io/badge/Written%20In-Bash-darkcyan?style=flat-square">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhtr-tech%2Fzphisher&title=Visitors&edge_flat=false"/></a>
-</p>
-
-<p align="center"><b>A beginners friendly, Automated phishing tool with 30+ templates.</b></p>
 
 ##
 
@@ -62,128 +45,116 @@ It only demonstrates "how phishing works". <b>You shall not misuse the informati
   $ bash zphisher.sh
   ```
 
-- On first launch, It'll install the dependencies and that's it. ***Zphisher*** is installed.
+2. Educational Simulation Environment Setup
 
-##
+This section outlines the setup for running a controlled, ethical simulation environment, similar to tools like Zphisher, to create test pages for defensive analysis. This must only be performed on closed, controlled networks and is strictly for security testing and educational purposes.
 
-### Installation (Termux)
-You can easily install zphisher in Termux by using tur-repo
-```
-$ pkg install tur-repo
-$ pkg install zphisher
-$ zphisher
-```
-### A Note : 
-***Termux discourages hacking*** .. So never discuss anything related to *zphisher* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
+A. Tool Used: Zphisher (Social Engineering Toolkit)
 
-##
+Zphisher is a publicly available toolkit used to generate simulated phishing pages quickly. In this lab, it is used to generate targets for defensive tools and understand the attacker's setup process.
 
-<p align="left">
-  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/htr-tech/zphisher.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
-</p>
+B. Installation & Execution Steps (Linux/Kali Environment)
 
-##
+Follow these steps to set up and run the Zphisher tool:
 
-### Installation via ".deb" file
+Update System Packages:
 
-- Download `.deb` files from the [**Latest Release**](https://github.com/htr-tech/zphisher/releases/latest)
-- If you are using ***termux*** then download the `*_termux.deb`
-
-- Install the `.deb` file by executing
-  ```
-  apt install <your path to deb file>
-  ```
-  Or
-  ```
-  $ dpkg -i <your path to deb file>
-  $ apt install -f
-  ```
-
-##
-
-### Run on Docker
-
-- Docker Image Mirror:
-  - **DockerHub** : 
-    ```
-    docker pull htrtech/zphisher
-    ```
-  - **GHCR** : 
-    ```
-    docker pull ghcr.io/htr-tech/zphisher:latest
-    ```
-
-- By using the wrapper script [**run-docker.sh**](https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh)
-
-  ```
-  $ curl -LO https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh
-  $ bash run-docker.sh
-  ```
-- Temporary Container
-
-  ```
-  docker run --rm -ti htrtech/zphisher
-  ```
-  - Remember to mount the `auth` directory.
-
-##
-
-<details>
-  <summary><h3>Dependencies</h3></summary>
-
-<b>Zphisher</b> requires following programs to run properly - 
-- `git`
-- `curl`
-- `php`
-
-> All the dependencies will be installed automatically when you run **Zphisher** for the first time.
-</details>
-
-<details>
-  <summary><h3>Tested on</h3></summary>
-
-- **Ubuntu**
-- **Debian**
-- **Arch**
-- **Manjaro**
-- **Fedora**
-- **Termux**
-</details>
-
-##
-
-<h3 align="center"><i>:: Workflow ::</i></h3>
-<p align="center">
-<img src=".github/misc/workflow.gif"/>
-</p>
-
-##
-
-### Find Me on:
-<p align="left">
-  <a href="https://tahmidrayat.is-a.dev" target="_blank"><img src="https://img.shields.io/badge/Socials-grey?style=for-the-badge&logo=linktree"></a>
-  <a href="https://github.com/htr-tech" target="_blank"><img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github"></a>
-</p>
+sudo apt update
 
 
-### *Thanks to all contributors*:
+Ensures your local package list is up-to-date.
 
-<table>
-  <tr align="center">
-    <td><a href="https://github.com/1RaY-1"><img src="https://avatars.githubusercontent.com/u/78962948?s=100" /><br /><sub><b>1RaY-1</b></sub></a></td>
-    <td><a href="https://github.com/adi1090x"><img src="https://avatars.githubusercontent.com/u/26059688?s=100" /><br /><sub><b>Aditya Shakya</b></sub></a></td>
-    <td><a href="https://github.com/AliMilani"><img src="https://avatars.githubusercontent.com/u/59066012?s=100" /><br /><sub><b>Ali Milani</b></sub></a></td>
-    <td><a href="https://github.com/Meht-evaS"><img src="https://avatars.githubusercontent.com/u/57435273?s=100" /><br /><sub><b>AmnesiA</b></sub></a></td>
-    <td><a href="https://github.com/KasRoudra"><img src="https://avatars.githubusercontent.com/u/78908440?s=100" /><br /><sub><b>KasRoudra</b></sub></a></td>
-   <td><a href="https://github.com/MoisesTapia"><img src="https://avatars.githubusercontent.com/u/28166400?s=100" /><br /><sub><b>Moises Tapia</b></sub></a></td>
-  </tr>
-  <tr align="center">
-   <td><a href="https://github.com/E343IO"><img src="https://avatars.githubusercontent.com/u/74646789?s=100" /><br /><sub><b>Mr.Derek</b></sub></a></td>
-    <td><a href="https://github.com/BDhackers009"><img src="https://avatars.githubusercontent.com/u/67186139?s=100" /><br /><sub><b>Mustakim Ahmed</b></sub></a></td>
-    <td><a href="https://github.com/sepp0"><img src="https://avatars.githubusercontent.com/u/36642137?s=100" /><br /><sub><b>sepp0</b></sub></a></td>
-    <td><a href="https://github.com/TripleHat"><img src="https://avatars.githubusercontent.com/u/68332137?s=100" /><br /><sub><b>TripleHat</b></sub></a></td>
-    <td><a href="https://github.com/Yisus7u7"><img src="https://avatars.githubusercontent.com/u/64093255?s=100" /><br /><sub><b>Yisus7u7</b></sub></a></td>
-  </tr>
-<table>
+Install Git (Required Dependency):
+
+sudo apt install git -y
 
 
+Installs the necessary tool for cloning repositories.
+
+Clone the Zphisher Repository (Deep-Level Clone):
+
+sudo git clone --depth=1 [https://github.com/htr-tech/zphisher.git](https://github.com/htr-tech/zphisher.git)
+
+
+Downloads only the latest commit to save time and space.
+
+Navigate to the Tool Directory:
+
+cd zphisher/
+
+
+Moves into the newly downloaded Zphisher folder.
+
+Execute the Tool:
+
+bash zphisher.sh
+
+
+Runs the main shell script to launch the Zphisher interface.
+
+3. Simulated Attack Scenario: Lure Details
+
+A. Delivery Method (Simulation)
+
+Simulated Email Sending Platform: https://anonymousemail.me/ (Used for ethically testing the delivery of the lure in a controlled environment.)
+
+B. Full Simulated Phishing Lure Content: PayPal Deception
+
+This is the content crafted to trigger fear and urgency, compelling the target to click the malicious link generated by Zphisher.
+
+PayPal
+Immediate Action Required: Account Suspension Warning
+Dear Customer,
+
+This is a critical security alert. Our systems have detected unusual and **suspicious activity related to unauthorized login attempts** on your account. To protect your financial data, immediate restrictions have been placed.
+
+Failure to complete the verification process immediately will result in the **PERMANENT SUSPENSION** of your account.
+
+What is the problem?
+Multiple security alerts triggered due to login attempts from a device or location not previously associated with your PayPal account.
+
+To lift the restriction, you must confirm your details. Failure to act swiftly is taken as non-compliance with our security policy.
+
+How you can help?
+To secure your account and prevent permanent closure, you must **immediately log in and follow the steps to update and re-verify your personal and financial information.** Please complete this process **within 24 hours**.
+
+Log In to Verify Account
+
+
+4. Defense and Mitigation Strategies
+
+The best defense against phishing is education and proactive security measures.
+
+🚨 Phishing Lure Analysis Summary:
+
+Element
+
+Social Engineering Tactic
+
+Defensive Countermeasure
+
+Suspension/Closure Threat
+
+FEAR & URGENCY
+
+NEVER click embedded links; navigate to the site manually.
+
+Unauthorized Login Attempt
+
+JUSTIFICATION
+
+Check the email domain and the final destination URL.
+
+24-Hour Deadline
+
+PRESSURE
+
+Contact the official service provider directly via phone or the official website.
+
+🔒 Essential Technical Defenses
+
+Enable Multi-Factor Authentication (MFA/2FA): The single most effective defense. If your password is stolen, the attacker still cannot log in without the second factor.
+
+Keep Software Updated: Regularly update your operating system, browser, and antivirus software.
+
+Report Phishing: Always report suspicious emails to the legitimate company being impersonated and to your email provider.
